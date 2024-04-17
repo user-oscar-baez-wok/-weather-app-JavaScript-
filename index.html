@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="weather-title">Aplicación del clima</h2>
+      <p id="error-container"></p>
+      <div class="weather-container">
+        <p class="weather-response-city" id="weather_response_city"></p>
+        <p class="weather_text" id="weather_text"></p>
+        <figure>
+          <img
+            class="weather-image"
+            id="weather_image"
+            src="https://th.bing.com/th/id/OIP.ODF68Yqk4FnO3-Kcbie-3AHaFl?rs=1&pid=ImgDetMain"
+            alt="Imagen del tiempo"
+          />
+        </figure>
+        <div class="weather-response-degrees">
+          <p class="weather-response-degrees" id="weather_response_degrees"></p>
+          <p
+            class="weather-response-degrees_min_max"
+            id="weather_response_degrees_min_max"
+          ></p>
+          <p class="weather-response-expect" id="weather_response_expect"></p>
+        </div>
+
+        <section
+          class="weather-response-optional"
+          id="weather_response_optional"
+        >
+          <div
+            class="weather-response-optional-item"
+            id="weather_response_optional_item"
+          >
+            <span class="material-symbols-outlined"> airwave </span>
+            <p class="weather-response-text" id="weather_wind"></p>
+          </div>
+
+          <div
+            class="weather-response-optional-item"
+            id="weather_response_optional_item"
+          >
+            <span class="material-symbols-outlined"> water_drop </span>
+            <p class="weather-response-text" id="weather_precipitation">
+              <!-- 0.2% -->
+            </p>
+          </div>
+
+          <div
+            class="weather-response-optional-item"
+            id="weather_response_optional_item"
+          >
+            <span class="material-symbols-outlined"> thermometer </span>
+            <p class="weather-response-text" id="feels_like"></p>
+          </div>
+        </section>
+      </div>
+      <form id="form" class="form hidden">
+        <label for="form_search_text"> Buscar por Ciudad </label>
+        <input
+          type="text"
+          class="form-search-text"
+          id="form_search_text"
+          autocomplete="off"
+          placeholder="San Luis Potosi, Mexico, Zacatecas ..."
+          required
+        />
+        <input
+          type="submit"
+          value="Buscar"
+          class="form-submit"
+          id="form_submit"
+        />
+      </form>
+      <button class="weather-button-search" id="weather_button_search">
+        <span class="material-symbols-outlined"> search </span>
+      </button>
+      <button class="weather-button-close hidden" id="weather_button_close">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+    </main>
+    <footer class="footer">
+      <p>Oscar Baez @2024</p>
+    </footer>
+  </body>
+</html>
